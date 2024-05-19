@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>shopping cart</title>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 80%;
+      margin: 20px auto;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <h1>Shopping cart</h1>
+  <form>
+    <label for="productName">Product Name:</label>
+    <input type="text" id="productName" required><br><br>
+
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" required><br><br>
+
+    <label for="rate">Rate:</label>
+    <input type="number" id="rate" required><br><br>
+
+    <button type="button" onclick="addItem()">Add Item</button>
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Serial No</th>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Rate</th>
+        <th>Total</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="Items">
+    </tbody>
+  </table>
+
+  <p>Grand Total: <span id="grandTotal">0</span></p>
+
+  <script>
+    let grandTotal = 0;
+    let serialNumberCounter = 1;
+
+    function addItem() {
+      const productName = document.getElementById('productName').value;
+      const quantity = parseInt(document.getElementById('quantity').value);
+      const rate = parseFloat(document.getElementById('rate').value);
+
+      const total = quantity * rate;
+      grandTotal += total;
+
+      const newRow = document.createElement('tr');
+      newRow.innerHTML = ` 
+        <td>${serialNumberCounter}</td>
+        <td>${productName}</td>
+        <td>${quantity}</td>
+        <td>${rate}</td>
+        <td>${total.toFixed(2)}</td>
+        <td><button type="button" onclick="removeItem(this)">Remove</button></td>
+      `;
+
+      document.getElementById('Items').appendChild(newRow);
+      document.getElementById('grandTotal').textContent = grandTotal.toFixed(2);
+      document.getElementById('productName').value = '';
+      document.getElementById('quantity').value = '';
+      document.getElementById('rate').value = '';
+      serialNumberCounter++;
+    }
+
+    function removeItem(button) {
+      const row = button.parentNode.parentNode;
+      const totalCell = row.querySelector('td:nth-child(5)');
+      const total = parseFloat(totalCell.textContent);
+      grandTotal -= total;
+      row.parentNode.removeChild(row);
+      document.getElementById('grandTotal').textContent = grandTotal.toFixed(2);
+      const rows = document.querySelectorAll('#Items tr');
+      serialNumberCounter = 1;
+      rows.forEach(row => {
+        row.querySelector('td:nth-child(1)').textContent = serialNumberCounter;
+        serialNumberCounter++;
+      });
+    }
+  </script>
+</body>
+</html>
