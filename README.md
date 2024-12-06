@@ -1,6 +1,6 @@
 # Clothing E-Commerce Website
 
-This is a clothing e-commerce website built using HTML, CSS, and JavaScript. The website features a user-friendly interface that allows users to browse and purchase clothing items online. It also includes two themes: a light theme and a dark theme, providing a personalized browsing experience.
+This is an e-commerce clothing website built using HTML, CSS, and JavaScript .Urbanly is a dynamic and modern e-commerce web application designed to provide a seamless online shopping experience for users. This project serves as a complete solution for showcasing and selling trendy apparel and accessories. It incorporates user-friendly features, responsive design, and efficient functionality tailored for a clothing store.
 
 
 
