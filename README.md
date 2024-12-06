@@ -1,4 +1,4 @@
-# Clothing E-Commerce Website
+# Urbanly - E-Commerce Website
 
 ![Screenshot 2024-12-06 141429](https://github.com/user-attachments/assets/5d7d92f1-8984-4e0d-b1c1-0689c19bdec7)
 
