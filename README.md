@@ -1,9 +1,8 @@
 # Clothing E-Commerce Website
 
+![Screenshot 2024-12-06 141429](https://github.com/user-attachments/assets/5d7d92f1-8984-4e0d-b1c1-0689c19bdec7)
 
-
-This is an e-commerc![Screenshot 2024-12-06 141429](https://github.com/user-attachments/assets/5d7d92f1-8984-4e0d-b1c1-0689c19bdec7)
-e clothing website built using HTML, CSS, and JavaScript .Urbanly is a dynamic and modern e-commerce web application designed to provide a seamless online shopping experience for users. This project serves as a complete solution for showcasing and selling trendy apparel and accessories. It incorporates user-friendly features, responsive design, and efficient functionality tailored for a clothing store.
+This is an e-commerce clothing website built using HTML, CSS, and JavaScript .Urbanly is a dynamic and modern e-commerce web application designed to provide a seamless online shopping experience for users. This project serves as a complete solution for showcasing and selling trendy apparel and accessories. It incorporates user-friendly features, responsive design, and efficient functionality tailored for a clothing store.
 
 
 
